@@ -13,7 +13,7 @@ public class Kalculator {
 
         switch (operation) {
             case '+':
-                System.out.println("Result is " + operand1 + operand2);
+                System.out.println("Result is " + (operand1+operand2));
                 break;
             case '-':
                 System.out.println(operand1 - operand2);
