@@ -5,6 +5,7 @@ public class Loader {
         System.out.printf("Вес собаки N1: %.2f %n", dog1.getWeight());
         dog1.feed(200.0);
         dog1.woof();
+        dog1.pee();
         System.out.printf("Вес собаки N1 после кормежки: %.2f %n", dog1.getWeight());
     }
 }
