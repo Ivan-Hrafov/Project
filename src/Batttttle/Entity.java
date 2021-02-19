@@ -1,17 +1,17 @@
 package Batttttle;
 
-abstract class Entity{
+public abstract class Entity {
     private String name;
     private int hp = 100;
     private boolean destroyed;
 
-    Entity(String name){
+    public Entity(String name) {
         this.name = name;
     }
 
-    protected boolean damage(int dhp){
+    protected boolean damage(int dhp) {
         hp -= dhp;
-        if (hp < 0){
+        if (hp < 0) {
             destroyed = true;
             System.out.println("Entity " + name + " was destroyed");
             return true;
@@ -19,7 +19,7 @@ abstract class Entity{
         return false;
     }
 
-    public boolean isDestroyed(){
+    public boolean isDestroyed() {
         return destroyed;
     }
 }

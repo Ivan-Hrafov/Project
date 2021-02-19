@@ -2,5 +2,6 @@ package ExtendsZoo;
 
 public interface Soundable {
 
-    abstract public void sound();
+   abstract public  void sound();
+
 }

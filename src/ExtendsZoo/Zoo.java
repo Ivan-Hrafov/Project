@@ -3,38 +3,40 @@ package ExtendsZoo;
 import java.util.Arrays;
 
 public class Zoo {
-    Object[] objects;
+    Object[] animals;
+
+    public Zoo() {
+        animals = new Object[3];
+        animals[0] = new Dog();
+        animals[2] = new Cat();
+        animals[1] = new Reptile();
+    }
+
+
+    public void print() {
+        for (Object a : animals) {
+            System.out.println(a);
+
+        }
+    }
 
     @Override
     public String toString() {
-        return "Zoo: " + Arrays.toString(objects);
-    }
-
-    public Zoo() {
-        objects = new Object[3]; // в этой строке мы еще не создаем животных
-        // наполняем массив конкретными животными
-        objects[0] = new Dog();
-        objects[1] = new Cat();
-        objects[2] = new Reptile();
-    }
-
-    public void print() {
-        // Используем цикл!
-        // Каждое животное выводится по-своему!
-        for (Object a : objects) {
-            System.out.println(a);
-        }
+        return "Zoo: " + Arrays.toString(animals);
     }
 
     public void sound() {
-        for (Object a : objects) {
-            if (a instanceof Soundable)
-                ((Soundable)a).sound();
+        for (Object a : animals) {
+            if (a instanceof Soundable) {
+                ((Soundable) a).sound();
+            }
         }
     }
 
+
     public void change(Object a, int i) {
-        if (i > 0 && i < objects.length)
-            objects[i] = a;
+        if (i >= 0 && i < animals.length) {
+            animals[i] = a;
+        }
     }
 }

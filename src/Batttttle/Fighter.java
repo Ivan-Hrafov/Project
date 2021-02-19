@@ -1,6 +1,5 @@
 package Batttttle;
 
 public interface Fighter {
-   abstract public void attack(Entity victim);
-
+    abstract void attack(Entity entity);
 }

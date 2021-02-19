@@ -1,26 +1,26 @@
 package ExtendsCat;
 
 public class Animal {
-    private boolean vegetarian;
+
+    private boolean vegeterian;
     private String eats;
 
-    public Animal(){}
 
-    public Animal(boolean veg, String food){
-        this.vegetarian = veg;
+    public Animal(boolean veg, String food) {
+        this.vegeterian = veg;
         this.eats = food;
     }
+
+    public Animal() { }
 
     public void sound() {
     }
 
-    public boolean isVegetarian() {
-        return vegetarian;
+    public boolean isVegeterian() {
+        return vegeterian;
     }
 
     public String getEats() {
         return eats;
     }
 }
-
-
